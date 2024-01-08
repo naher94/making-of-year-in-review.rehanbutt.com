@@ -67,3 +67,12 @@ h1, h2, h3, h4 {
   height: 0.15rem;
   width: 4rem;
 }
+
+section{
+  .divider-container{
+    margin-block-end: 2em;
+  }
+  h2{
+    font-weight: $merriweather-bold;
+  }
+}

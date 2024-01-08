@@ -16,6 +16,7 @@ footer{
     a{
       text-decoration: underline;
       font-weight: $merriweather-bold;
+      color: semantic-color(text);
       &:not(:first-of-type){
         margin-inline-start: 1em;
       }
