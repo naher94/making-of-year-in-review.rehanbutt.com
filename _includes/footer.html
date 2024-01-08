@@ -1,5 +1,29 @@
 <footer>
   <div class="grid-container grid-x">
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <div class="cell divider-container">
+      <div class="divider"></div>
+    </div>
+    <div class="grid-x cell medium-8">
+      <h2>Hope you enjoyed the behind the scenes look at my year in reviews. A little meta design if you will.</h2>
+    </div>
+    <div class="cell link-section">
+      <p>Don't forget to check out the last 5 years</p>
+      {%- include external-link.html link="https://2019.rehanbutt.com" content="2019" -%}
+      {%- include external-link.html link="https://2020.rehanbutt.com" content="2020" -%}
+      {%- include external-link.html link="https://2021.rehanbutt.com" content="2021" -%}
+      {%- include external-link.html link="https://2022.rehanbutt.com" content="2022" -%}
+      {%- include external-link.html link="https://2023.rehanbutt.com" content="2023" -%}
+    </div>
+    <div class="grid-x cell align-justify title-area align-middle">
+      <div class="cell shrink">
+        The Making of Year in Review
+      </div>
+      <div class="logo cell shrink">
+        <a target="_blank" rel="noopener" href="{{ site.mainurl }}/">
+          {% capture location %}footer{% endcapture %}
+          {% include rehan-logo.svg %}
+        </a>
+      </div>
+    </div>
   </div>
 </footer>

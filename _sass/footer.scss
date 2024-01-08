@@ -1,0 +1,46 @@
+footer{
+  padding: 4rem 0;
+  .divider-container{
+    margin-block-end: 1.5em;
+  }
+  h2{
+    font-weight: $merriweather-bold;
+  }
+  .link-section{
+    margin-block-start: 2em;
+    font-size: 1.5em;
+    p{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: underline;
+      font-weight: $merriweather-bold;
+      &:not(:first-of-type){
+        margin-inline-start: 1em;
+      }
+    }
+  }
+  .title-area{
+    font-family: $big-shoulders;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: $big-shoulders-bold;
+    margin-block-start: 4em;
+  }
+  .logo{
+    #rehan-logo-footer{
+      height: 30px;
+      transition: $sprint;
+      &:hover{
+        transform: scale(1.1);
+      }
+      g{
+        fill:semantic-color(text); //Changes the color of my logo inline
+      }
+      @include breakpoint(small only){
+        height: 22px;
+      }
+    }
+  }
+}
