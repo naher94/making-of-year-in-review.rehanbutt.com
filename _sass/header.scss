@@ -1,6 +1,7 @@
 header{
-  background-color: #FEE7D6;
+  background-color: semantic-color(header-bg);
   padding: 4rem 0;
+  margin-block-end: 4em;
   h1{
     span{
       display: block;
@@ -16,6 +17,9 @@ header{
       font-size: 1.75em;
       line-height: 1;
     }
+  }
+  p{
+    margin: 0;
   }
   .logo{
     #rehan-logo-header{

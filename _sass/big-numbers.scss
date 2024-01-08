@@ -1,0 +1,23 @@
+.big-numbers{
+  margin-block: 8em;
+  .big-number-container{
+    text-align: center;
+    span{
+      display: block;
+    }
+    .big-number{
+      font-family: $merriweather;
+      font-size: 5em;
+      font-weight: $merriweather-bold;
+      line-height: 1;
+    }
+    .big-label{
+      font-family: $big-shoulders;
+      text-transform: uppercase;
+      font-size: 2em;
+    }
+  }
+  .divider-container{
+    margin-block: 2em;
+  }
+}
