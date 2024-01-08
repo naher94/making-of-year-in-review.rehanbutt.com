@@ -4,3 +4,25 @@
 
 @import 'app';
 @import 'variables';
+
+body {
+  font-family: $merriweather;
+  font-weight: $merriweather;
+  font-size: $base-font-size; // = 1em
+  color: semantic-color(text);
+  overflow-x: hidden;
+  @include breakpoint(small only) {
+    font-size: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: semantic-color(page-bg);
+  }
+}
+
+::selection {
+  // background: semantic-color(selection-background);
+}
+
+h1, h2, h3, h4 {
+  font-family: $merriweather;
+}
