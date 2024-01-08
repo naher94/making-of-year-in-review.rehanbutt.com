@@ -4,6 +4,7 @@
 
 @import 'app';
 @import 'variables';
+@import 'header';
 
 body {
   font-family: $merriweather;
@@ -25,6 +26,10 @@ h1, h2, h3, h4 {
   font-family: $merriweather;
 }
 
-header{
-  background-color: #FEE7D6;
+.divider{
+  background-color: semantic-color(text);
+  border-radius: 500px;
+  content: '';
+  height: 0.15rem;
+  width: 4rem;
 }

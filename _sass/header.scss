@@ -1,0 +1,35 @@
+header{
+  background-color: #FEE7D6;
+  padding: 4rem 0;
+  h1{
+    span{
+      display: block;
+    }
+    .making-of{
+      font-family: $big-shoulders;
+      text-transform: uppercase;
+      font-size: 0.75em;
+    }
+    .yir{
+      font-family: $merriweather;
+      font-weight: $merriweather-bold;
+      font-size: 1.75em;
+      line-height: 1;
+    }
+  }
+  .logo{
+    #rehan-logo-header{
+      height: 30px;
+      transition: $sprint;
+      &:hover{
+        transform: scale(1.1);
+      }
+      g{
+        fill:semantic-color(text); //Changes the color of my logo inline
+      }
+      @include breakpoint(small only){
+        height: 22px;
+      }
+    }
+  }
+}
