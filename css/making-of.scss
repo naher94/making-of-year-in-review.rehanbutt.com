@@ -65,6 +65,25 @@ p{
   text-wrap: balance;
 }
 
+.hero{
+  img{
+    @media (prefers-color-scheme: dark) {
+      filter: none;
+    }
+  }
+  .lightmode-flip{
+    @media (prefers-color-scheme: dark) {
+      display: none;
+    } 
+  }
+  .darkmode-flip{
+    display: none;
+    @media (prefers-color-scheme: dark) {
+      display: block;
+    } 
+  }
+}
+
 .divider{
   background-color: semantic-color(text);
   border-radius: 500px;
