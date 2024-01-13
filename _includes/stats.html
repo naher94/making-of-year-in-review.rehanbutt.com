@@ -57,5 +57,34 @@
       {% endfor %}
     </div>
   </div>
+  <div class="grid-container grid-x code-stat align-justify">
+    <div class="cell divider-container">
+      <div class="divider"></div>
+    </div>
+    <div class="cell text-content medium-6">
+      <h2>Lines of Code Over the Years</h2>
+      <p>Every year I try to generate a new way to visualize the sections. And add some new info over the year. 1 such section was movies, I started tracking them in 2021. Some sections like movies requires quite a bit of prep such as tracking each film watched. I use Letterboxd to do so.</p>
+    </div>
+    <div class="cell stat-table medium-5">
+      {% assign array-list = "(2019|382333|—),(2020|228660|40% Decrease),(2021|116867|48% Decrease),(2022|195818|67% Increase),(2023|164246|16% Decrease)" | remove: "(" | remove: ")" | split: ',' %}
+      {% for item in array-list %}
+      {% assign each = item | split: '|' %}
+        <div class="stat-row grid-x cell align-justify">
+          <div class="cell medium-7 grid-x align-middle">
+            <h3 class="cell medium-3">{{each[0]}}</h3>
+            <p class="cell auto">
+              {{each[1]}}
+              {%- if {{each[2]}} contains 'De' -%}
+              <i class="fas fa-caret-down"></i>
+              {%- elsif {{each[2]}} contains 'In' -%}
+              <i class="fas fa-caret-up"></i>
+              {%- endif -%}
+            </p>
+          </div>
+          <p class="cell shrink stat-description">{{each[2]}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 
 </section>
