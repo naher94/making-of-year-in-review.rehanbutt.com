@@ -137,7 +137,6 @@ section{
   .stat-table{
     padding-inline-start: 2em;
     .stat-row{
-      // font-size: 2em;
       border-bottom: 1px $navy-black solid;
       padding: 0.25em 0;
       &:last-of-type{
@@ -147,6 +146,7 @@ section{
         margin-bottom: 0;
         display: inline-block;
         font-size: 2em;
+        line-height: 1.5;
       }
       h3{
         margin-inline-end: 1em;
