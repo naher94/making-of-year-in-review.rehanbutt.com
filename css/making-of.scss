@@ -165,3 +165,16 @@ section{
     }
   }
 }
+
+.year-callout{
+  display: flex;
+  align-items: center;
+  .year-badge{
+    padding: 0.25em 0.75em;
+    font-size: 0.5em;
+    border-radius: $pill-radius;
+    background-color: $navy-black;
+    color: $pure-white;
+    margin-inline-start: 0.75em;
+  }
+}
