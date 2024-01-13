@@ -132,3 +132,31 @@ section{
   margin-block-start: 0.5em;
   font-style: italic;
 }
+
+.stats{
+  .stat-table{
+    padding-inline-start: 2em;
+    .stat-row{
+      // font-size: 2em;
+      border-bottom: 1px $navy-black solid;
+      padding: 0.25em 0;
+      &:last-of-type{
+        border: none;
+      }
+      h3, p{
+        margin-bottom: 0;
+        display: inline-block;
+        font-size: 2em;
+      }
+      h3{
+        margin-inline-end: 1em;
+        font-weight: $merriweather-bold;
+      }
+      .stat-description{
+        font-style: italic;
+        font-weight: $merriweather-light;
+        color: rgba($navy-black, 0.4);
+      }
+    }
+  }
+}

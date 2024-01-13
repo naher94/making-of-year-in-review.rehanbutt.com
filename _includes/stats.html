@@ -1,0 +1,28 @@
+<section class="stats">
+  <div class="grid-container grid-x">
+    <div class="cell divider-container">
+      <div class="divider"></div>
+    </div>
+    <div class="cell text-content medium-6">
+      <h2>Music Over the Years</h2>
+      <p>Apple music replay first launched in at the end of 2019, Just out of reach to be included in the first year in review. Following uses I used the stats they provided to help generate this content with a new fun way to present it.</p>
+    </div>
+    <div class="cell stat-table medium-6">
+      {% assign array-list = "(2019|—|Not Tracked),(2020|527hrs|—),(2021|564hrs|7% Increase),(2022|327hrs|42% Decrease),(2023|214hrs|34% Decrease)" | remove: "(" | remove: ")" | split: ',' %}
+      {% for item in array-list %}
+      {% assign each = item | split: '|' %}
+        <div class="stat-row grid-x cell align-justify">
+          <div class="cell medium-7 grid-x align-middle">
+            <h3 class="cell medium-3">{{each[0]}}</h3>
+            <p class="cell auto">{{each[1]}}</p>
+          </div>
+          <p class="cell shrink stat-description">{{each[2]}}</p>
+        </div>
+      {% endfor %}
+
+
+
+    </div>
+    
+  </div>
+</section>
