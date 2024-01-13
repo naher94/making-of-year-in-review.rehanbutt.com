@@ -136,7 +136,7 @@ section{
 .stats{
   .stat-table{
     .stat-row{
-      border-bottom: 1px $navy-black solid;
+      border-bottom: 1px semantic-color(text) solid;
       padding: 0.25em 0;
       &:last-of-type{
         border: none;
@@ -154,7 +154,10 @@ section{
       .stat-description{
         font-style: italic;
         font-weight: $merriweather-light;
-        color: rgba($navy-black, 0.4);
+        // color: rgba($navy-black, 0.4);
+        color: semantic-color(stat-description);
+        // color: rgba(semantic-color(text), 0.4);
+
       }
       i{
         margin-inline-start: 0.25em;
