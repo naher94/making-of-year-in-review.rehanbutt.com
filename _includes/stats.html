@@ -1,5 +1,5 @@
 <section class="stats">
-  <div class="grid-container grid-x">
+  <div class="grid-container grid-x music-stat align-justify">
     <div class="cell divider-container">
       <div class="divider"></div>
     </div>
@@ -7,19 +7,55 @@
       <h2>Music Over the Years</h2>
       <p>Apple music replay first launched in at the end of 2019, Just out of reach to be included in the first year in review. Following uses I used the stats they provided to help generate this content with a new fun way to present it.</p>
     </div>
-    <div class="cell stat-table medium-6">
+    <div class="cell stat-table medium-5">
       {% assign array-list = "(2019|—|Not Tracked),(2020|527hrs|—),(2021|564hrs|7% Increase),(2022|327hrs|42% Decrease),(2023|214hrs|34% Decrease)" | remove: "(" | remove: ")" | split: ',' %}
       {% for item in array-list %}
       {% assign each = item | split: '|' %}
         <div class="stat-row grid-x cell align-justify">
           <div class="cell medium-7 grid-x align-middle">
             <h3 class="cell medium-3">{{each[0]}}</h3>
-            <p class="cell auto">{{each[1]}}</p>
+            <p class="cell auto">
+              {{each[1]}}
+              {%- if {{each[2]}} contains 'De' -%}
+              <i class="fas fa-caret-down"></i>
+              {%- elsif {{each[2]}} contains 'In' -%}
+              <i class="fas fa-caret-up"></i>
+              {%- endif -%}
+            </p>
           </div>
           <p class="cell shrink stat-description">{{each[2]}}</p>
         </div>
       {% endfor %}
     </div>
   </div>
-  
+  <div class="grid-container grid-x movie-stat align-justify">
+    <div class="cell divider-container">
+      <div class="divider"></div>
+    </div>
+    <div class="cell text-content medium-6">
+      <h2>Movies Over the Years</h2>
+      <p>Every year I try to generate a new way to visualize the sections. And add some new info over the year. 1 such section was movies, I started tracking them in 2021. Some sections like movies requires quite a bit of prep such as tracking each film watched. I use Letterboxd to do so.</p>
+    </div>
+    <div class="cell stat-table medium-5">
+      {% assign array-list = "(2019|—|Not Tracked),(2020|—|Not Tracked),(2021|161|—),(2022|120|25% Decrease),(2023|185|54% Increase)" | remove: "(" | remove: ")" | split: ',' %}
+      {% for item in array-list %}
+      {% assign each = item | split: '|' %}
+        <div class="stat-row grid-x cell align-justify">
+          <div class="cell medium-7 grid-x align-middle">
+            <h3 class="cell medium-3">{{each[0]}}</h3>
+            <p class="cell auto">
+              {{each[1]}}
+              {%- if {{each[2]}} contains 'De' -%}
+              <i class="fas fa-caret-down"></i>
+              {%- elsif {{each[2]}} contains 'In' -%}
+              <i class="fas fa-caret-up"></i>
+              {%- endif -%}
+            </p>
+          </div>
+          <p class="cell shrink stat-description">{{each[2]}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
 </section>

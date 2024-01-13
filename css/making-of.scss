@@ -135,7 +135,6 @@ section{
 
 .stats{
   .stat-table{
-    padding-inline-start: 2em;
     .stat-row{
       border-bottom: 1px $navy-black solid;
       padding: 0.25em 0;
@@ -145,7 +144,7 @@ section{
       h3, p{
         margin-bottom: 0;
         display: inline-block;
-        font-size: 2em;
+        font-size: 1.75em;
         line-height: 1.5;
       }
       h3{
@@ -156,6 +155,9 @@ section{
         font-style: italic;
         font-weight: $merriweather-light;
         color: rgba($navy-black, 0.4);
+      }
+      i{
+        margin-inline-start: 0.25em;
       }
     }
   }
