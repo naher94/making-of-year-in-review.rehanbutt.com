@@ -21,6 +21,35 @@ footer{
         margin-inline-start: 1em;
       }
     }
+    .quirky-bounce {
+      text-decoration: none;
+      font-family: $merriweather;
+      font-weight: 700;
+      position: relative;
+      color: semantic-color(text);
+      line-height: 120%;
+      letter-spacing: -1px;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      &:hover {
+        &:before {
+          transform: scale3d(1.2, 1.2, 1.2);
+          // background: blue;
+        }
+      }
+      &:before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 0.15em;
+        left: 0;
+        display: block;
+        background: semantic-color(text);
+        transform: rotate(-1deg);
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+    }
   }
   .title-area{
     font-family: $big-shoulders;
