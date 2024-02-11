@@ -86,5 +86,35 @@
       {% endfor %}
     </div>
   </div>
+  <div class="grid-container grid-x code-stat align-justify">
+    <div class="cell divider-container">
+      <div class="divider"></div>
+    </div>
+    <div class="cell text-content medium-6">
+      <h2>Heavy Hitters Over the Years</h2>
+      <p>Every year I try to generate a new way to visualize the sections. And add some new info over the year.</p>
+    </div>
+    <div class="cell stat-table">
+      {% assign array-list = "(2019|—||Not Tracked),(2020|—||Not Tracked),(2021|Luca|luca-poster.jpg|3 Watches),(2022|Spider-Man: No Way Home|spiderman-poster.jpg|3 Watches),(2023|Elemental & Top Gun: Maverick|elemental-poster.jpg|3 Watches Each)" | remove: "(" | remove: ")" | split: ',' %}
+      {% for item in array-list %}
+      {% assign each = item | split: '|' %}
+        <div class="stat-row grid-x cell align-justify align-middle">
+          <div class="cell medium-7 grid-x align-middle">
+            <h3 class="cell medium-1">{{each[0]}}</h3>
+            <p class="cell auto">{{each[1]}}</p>
+            <div class="movie-poster">
+              {%- if {{each[2]}} contains "jpg" -%}
+              <img src="/img/{{each[2]}}" alt="">
+              {%- endif -%}
+              {%- if {{each[2]}} contains "elemental" -%}
+              <img src="/img/luca-poster.jpg" alt="">
+              {%- endif -%}
+            </div>
+          </div>
+          <p class="cell shrink stat-description">{{each[3]}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 
 </section>
