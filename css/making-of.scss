@@ -95,6 +95,9 @@ p{
 section{
   .divider-container{
     margin-block-end: 2em;
+    @include breakpoint(small only) {
+      margin-block-end: 1em;
+    }
   }
   h2{
     font-weight: $merriweather-bold;
