@@ -103,6 +103,9 @@ section{
 
 .sketch-production{
   margin-block-end: 10em;
+  @include breakpoint(small only) {
+    margin-block-end: 5em;
+  }
 }
 
 .image-wrapper{
@@ -145,6 +148,9 @@ section{
     .stat-row{
       border-bottom: 1px semantic-color(text) solid;
       padding: 0.25em 0;
+      @include breakpoint(small only) {
+        padding: 0.5em 0;
+      }
       &:last-of-type{
         border: none;
       }
@@ -154,8 +160,14 @@ section{
         font-size: 1.75em;
         line-height: 1.5;
       }
+      p{
+        @include breakpoint(small only) {
+          font-size: 1em;
+        }
+      }
       h3{
-        margin-inline-end: 1em;
+        // margin-inline-end: 1em;
+        margin-inline-end: 0.5em;
         font-weight: $merriweather-bold;
       }
       .stat-description{

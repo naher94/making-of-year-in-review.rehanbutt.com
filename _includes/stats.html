@@ -11,18 +11,16 @@
       {% assign array-list = "(2019|—|Not Tracked),(2020|527hrs|—),(2021|564hrs|7% Increase),(2022|327hrs|42% Decrease),(2023|214hrs|34% Decrease)" | remove: "(" | remove: ")" | split: ',' %}
       {% for item in array-list %}
       {% assign each = item | split: '|' %}
-        <div class="stat-row grid-x cell align-justify">
-          <div class="cell medium-7 grid-x align-middle">
-            <h3 class="cell medium-3">{{each[0]}}</h3>
-            <p class="cell auto">
-              {{each[1]}}
-              {%- if {{each[2]}} contains 'De' -%}
-              <i class="fas fa-caret-down"></i>
-              {%- elsif {{each[2]}} contains 'In' -%}
-              <i class="fas fa-caret-up"></i>
-              {%- endif -%}
-            </p>
-          </div>
+        <div class="stat-row grid-x cell align-justify align-middle">
+          <h3 class="cell medium-2">{{each[0]}}</h3>
+          <p class="cell auto">
+            {{each[1]}}
+            {%- if {{each[2]}} contains 'De' -%}
+            <i class="fas fa-caret-down"></i>
+            {%- elsif {{each[2]}} contains 'In' -%}
+            <i class="fas fa-caret-up"></i>
+            {%- endif -%}
+          </p>
           <p class="cell shrink stat-description">{{each[2]}}</p>
         </div>
       {% endfor %}
@@ -40,18 +38,16 @@
       {% assign array-list = "(2019|—|Not Tracked),(2020|—|Not Tracked),(2021|161|—),(2022|120|25% Decrease),(2023|185|54% Increase)" | remove: "(" | remove: ")" | split: ',' %}
       {% for item in array-list %}
       {% assign each = item | split: '|' %}
-        <div class="stat-row grid-x cell align-justify">
-          <div class="cell medium-7 grid-x align-middle">
-            <h3 class="cell medium-3">{{each[0]}}</h3>
-            <p class="cell auto">
-              {{each[1]}}
-              {%- if {{each[2]}} contains 'De' -%}
-              <i class="fas fa-caret-down"></i>
-              {%- elsif {{each[2]}} contains 'In' -%}
-              <i class="fas fa-caret-up"></i>
-              {%- endif -%}
-            </p>
-          </div>
+        <div class="stat-row grid-x cell align-justify align-middle">
+          <h3 class="cell medium-2">{{each[0]}}</h3>
+          <p class="cell auto">
+            {{each[1]}}
+            {%- if {{each[2]}} contains 'De' -%}
+            <i class="fas fa-caret-down"></i>
+            {%- elsif {{each[2]}} contains 'In' -%}
+            <i class="fas fa-caret-up"></i>
+            {%- endif -%}
+          </p>
           <p class="cell shrink stat-description">{{each[2]}}</p>
         </div>
       {% endfor %}
@@ -69,18 +65,16 @@
       {% assign array-list = "(2019|382333|—),(2020|228660|40% Decrease),(2021|116867|48% Decrease),(2022|195818|67% Increase),(2023|164246|16% Decrease)" | remove: "(" | remove: ")" | split: ',' %}
       {% for item in array-list %}
       {% assign each = item | split: '|' %}
-        <div class="stat-row grid-x cell align-justify">
-          <div class="cell medium-7 grid-x align-middle">
-            <h3 class="cell medium-3">{{each[0]}}</h3>
-            <p class="cell auto">
-              {{each[1]}}
-              {%- if {{each[2]}} contains 'De' -%}
-              <i class="fas fa-caret-down"></i>
-              {%- elsif {{each[2]}} contains 'In' -%}
-              <i class="fas fa-caret-up"></i>
-              {%- endif -%}
-            </p>
-          </div>
+        <div class="stat-row grid-x cell align-justify align-middle">
+          <h3 class="cell medium-2">{{each[0]}}</h3>
+          <p class="cell auto">
+            {{each[1]}}
+            {%- if {{each[2]}} contains 'De' -%}
+            <i class="fas fa-caret-down"></i>
+            {%- elsif {{each[2]}} contains 'In' -%}
+            <i class="fas fa-caret-up"></i>
+            {%- endif -%}
+          </p>
           <p class="cell shrink stat-description">{{each[2]}}</p>
         </div>
       {% endfor %}
