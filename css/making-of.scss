@@ -82,6 +82,19 @@ p{
       display: block;
     } 
   }
+  // TODO confirm this is not messing with anything else on the page
+  @include breakpoint(small only) {
+    .grid-padding-x > .cell{
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+    .grid-padding-x > .cell:first-of-type{
+      padding-left: 0.625rem;
+    }
+    .grid-padding-x > .cell:last-of-type{
+      padding-right: 0.625rem;
+    }
+  }
 }
 
 .divider{
