@@ -111,6 +111,10 @@ p{
 }
 
 section{
+  margin-block-end: 10rem;
+  @include breakpoint(small only) {
+    margin-block-end: 5rem;
+  }
   .divider-container{
     margin-block-end: 2em;
     @include breakpoint(small only) {
@@ -119,13 +123,6 @@ section{
   }
   h2{
     font-weight: $merriweather-bold;
-  }
-}
-
-.sketch-production{
-  margin-block-end: 10em;
-  @include breakpoint(small only) {
-    margin-block-end: 5em;
   }
 }
 

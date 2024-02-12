@@ -1,5 +1,4 @@
 .big-numbers{
-  margin-block: 8em;
   @include breakpoint(small only) {
     font-size: 0.5em;
   }
