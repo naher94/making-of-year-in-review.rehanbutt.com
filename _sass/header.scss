@@ -2,6 +2,10 @@ header{
   background-color: semantic-color(header-bg);
   padding: 4rem 0;
   margin-block-end: 4em;
+  @include breakpoint(small only) {
+    padding: 2rem 0;
+    margin-block-end: 2em;
+  }
   h1{
     span{
       display: block;
@@ -10,6 +14,9 @@ header{
       font-family: $big-shoulders;
       text-transform: uppercase;
       font-size: 0.75em;
+      @include breakpoint(small only) {
+        font-size: 1em;
+      }
     }
     .yir{
       font-family: $merriweather;
