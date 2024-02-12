@@ -162,6 +162,17 @@ section{
     }
   }
 }
+header, footer{
+  .grid-container{
+    padding-right: calc(0.9375rem * 2);
+    padding-left: calc(0.9375rem * 2);
+    @include breakpoint(small only) {
+      padding-right: calc(0.625rem * 2);
+      padding-left: calc(0.625rem * 2);
+    }
+  }
+}
+// End of matches that of grid-padding-x for the image grids
 
 .image-caption{
   margin-block-end: 0;
