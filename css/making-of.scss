@@ -87,7 +87,7 @@ p{
       display: block;
     } 
   }
-  // TODO confirm this is not messing with anything else on the page
+  // Reduces the spacing between hero screenshots
   @include breakpoint(small only) {
     .grid-padding-x > .cell{
       padding-left: 0.25rem;
