@@ -5,10 +5,16 @@ footer{
   }
   h2{
     font-weight: $merriweather-bold;
+    @include breakpoint(small only){
+      font-size: 1.5em;
+    }
   }
   .link-section{
     margin-block-start: 2em;
     font-size: 1.5em;
+    @include breakpoint(small only){
+      font-size: 1.25em;
+    }
     p{
       margin: 0;
       padding: 0;
