@@ -250,5 +250,9 @@ header, footer{
     background-color: $navy-black;
     color: $pure-white;
     margin-inline-start: 0.75em;
+    @include breakpoint(small only) {
+      font-size: 0.75em;
+      margin-inline-start: 0.5em;
+    }
   }
 }
