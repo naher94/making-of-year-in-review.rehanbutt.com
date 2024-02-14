@@ -172,6 +172,12 @@ header, footer{
     }
   }
 }
+.stat-table{
+  @include breakpoint(small only) {
+    padding-right: calc(0.625rem);
+    padding-left: calc(0.625rem);
+  }
+}
 // End of matches that of grid-padding-x for the image grids
 
 .text-content{
