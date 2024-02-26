@@ -5,25 +5,101 @@
 @import 'app';
 @import 'variables';
 @import 'header';
+@import 'footer';
+@import 'big-numbers';
 
 body {
   font-family: $merriweather;
   font-weight: $merriweather;
-  font-size: $base-font-size; // = 1em
+  font-size: 100%; // = 1em
   color: semantic-color(text);
-  overflow-x: hidden;
+  // overflow-x: hidden;
   background-color: semantic-color(page-bg);
-  @include breakpoint(small only) {
-    font-size: 16px;
-  }
+  // @include breakpoint(small only) {
+  //   font-size: 16px;
+  // }
 }
 
 ::selection {
   // background: semantic-color(selection-background);
+  background: #f7dfcd;
+}
+
+.no-select{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+// Visually hide any element (mostly text) accessibly.
+.visually-hidden{
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+// Missing alt text
+img[alt=""], img:not([alt]){
+  border: 5px dashed red;
+}
+
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  @media (prefers-color-scheme: dark) {
+    filter: brightness(0.8);
+  }
 }
 
 h1, h2, h3, h4 {
   font-family: $merriweather;
+}
+
+p{
+  text-wrap: pretty;
+}
+
+.hero{
+  img{
+    @media (prefers-color-scheme: dark) {
+      filter: none;
+    }
+  }
+  .lightmode-flip{
+    @media (prefers-color-scheme: dark) {
+      display: none;
+    } 
+  }
+  .darkmode-flip{
+    display: none;
+    @media (prefers-color-scheme: dark) {
+      display: block;
+    } 
+  }
+  // Reduces the spacing between hero screenshots
+  @include breakpoint(small only) {
+    .grid-padding-x > .cell{
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+    .grid-padding-x > .cell:first-of-type{
+      padding-left: 0.625rem;
+    }
+    .grid-padding-x > .cell:last-of-type{
+      padding-right: 0.625rem;
+    }
+  }
 }
 
 .divider{
@@ -32,4 +108,151 @@ h1, h2, h3, h4 {
   content: '';
   height: 0.15rem;
   width: 4rem;
+}
+
+section{
+  margin-block-end: 10rem;
+  @include breakpoint(small only) {
+    margin-block-end: 5rem;
+  }
+  .divider-container{
+    margin-block-end: 2em;
+    @include breakpoint(small only) {
+      margin-block-end: 1em;
+    }
+  }
+  h2{
+    font-weight: $merriweather-bold;
+  }
+}
+
+.image-wrapper{
+  position: relative;
+  overflow: hidden; //Only needed if the corner flag has a shadow
+}
+
+.corner-flag{
+  aspect-ratio: 1/1;
+  background-color: $navy-black;
+  color: $pure-white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: $merriweather;
+  font-weight: $merriweather-black;
+  padding: 0.75rem;
+  font-size: 2em;
+  box-shadow: -2px 2px 15px -4px rgba($navy-black, 0.5);
+  display: flex;
+  align-items: center;
+  @include breakpoint(small only) {
+    padding: 0.5rem;
+    font-size: 1em;
+  }
+}
+
+// matches that of grid-padding-x for the image grids
+.page-content{
+  .text-content, .divider-container{
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    @include breakpoint(small only) {
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+    }
+  }
+}
+header, footer{
+  .grid-container{
+    padding-right: calc(0.9375rem * 2);
+    padding-left: calc(0.9375rem * 2);
+    @include breakpoint(small only) {
+      padding-right: calc(0.625rem * 2);
+      padding-left: calc(0.625rem * 2);
+    }
+  }
+}
+.stat-table{
+  @include breakpoint(small only) {
+    padding-right: calc(0.625rem);
+    padding-left: calc(0.625rem);
+  }
+}
+// End of matches that of grid-padding-x for the image grids
+
+.text-content{
+  a{
+    text-decoration: underline;
+    color: inherit;
+  }
+}
+
+.image-caption{
+  margin-block-end: 0;
+  margin-bottom: 0;
+  margin-block-start: 0.5em;
+  font-style: italic;
+  a{
+    text-decoration: underline;
+    color: inherit;
+  }
+}
+
+.stats{
+  .music-stat, .movie-stat, .code-stat, .pixel-stat{
+    margin-block-start: 6em;
+  }
+  .stat-table{
+    .stat-row{
+      border-bottom: 1px semantic-color(text) solid;
+      padding: 0.25em 0;
+      @include breakpoint(small only) {
+        padding: 0.5em 0;
+      }
+      &:last-of-type{
+        border: none;
+      }
+      h3, p{
+        margin-bottom: 0;
+        display: inline-block;
+        font-size: 1.75em;
+        line-height: 1.5;
+      }
+      p{
+        @include breakpoint(small only) {
+          font-size: 1em;
+        }
+      }
+      h3{
+        // margin-inline-end: 1em;
+        margin-inline-end: 0.5em;
+        font-weight: $merriweather-bold;
+      }
+      .stat-description{
+        font-style: italic;
+        font-weight: $merriweather-light;
+        color: semantic-color(stat-description);
+      }
+      i{
+        margin-inline-start: 0.5em;
+      }
+    }
+  }
+}
+
+.year-callout{
+  display: flex;
+  align-items: center;
+  .year-badge{
+    padding: 0.25em 0.75em;
+    font-size: 0.5em;
+    border-radius: $pill-radius;
+    background-color: $navy-black;
+    color: $pure-white;
+    margin-inline-start: 0.75em;
+    @include breakpoint(small only) {
+      font-size: 0.75em;
+      margin-inline-start: 0.5em;
+    }
+  }
 }

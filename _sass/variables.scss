@@ -73,10 +73,14 @@ $semantic-colors:(
   light:(
     page-bg: #FFF0E5,
     text: $navy-black,
+    header-bg: #FEE7D6,
+    stat-description: rgba($navy-black, 0.4),
   ),
   dark:(
-    page-bg: $navy-black-d3,
+    page-bg: $navy-black-d4,
     text: $pure-white,
+    header-bg: $navy-black-d1,
+    stat-description: rgba($pure-white, 0.4),
   ),
 );
 

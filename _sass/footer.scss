@@ -1,0 +1,82 @@
+footer{
+  padding: 4rem 0;
+  .divider-container{
+    margin-block-end: 1.5em;
+  }
+  h2{
+    font-weight: $merriweather-bold;
+    @include breakpoint(small only){
+      font-size: 1.5em;
+    }
+  }
+  .link-section{
+    margin-block-start: 2em;
+    font-size: 1.5em;
+    @include breakpoint(small only){
+      font-size: 1.25em;
+    }
+    p{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: underline;
+      font-weight: $merriweather-bold;
+      color: semantic-color(text);
+      &:not(:first-of-type){
+        margin-inline-start: 1em;
+      }
+    }
+    .quirky-bounce {
+      text-decoration: none;
+      font-family: $merriweather;
+      font-weight: 700;
+      position: relative;
+      color: semantic-color(text);
+      line-height: 120%;
+      letter-spacing: -1px;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      &:hover {
+        &:before {
+          transform: scale3d(1.2, 1.2, 1.2);
+          // background: blue;
+        }
+      }
+      &:before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 0.10em;
+        left: 0;
+        display: block;
+        background: semantic-color(text);
+        transform: rotate(-1deg);
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+    }
+  }
+  .title-area{
+    font-family: $big-shoulders;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: $big-shoulders-bold;
+    margin-block-start: 4em;
+  }
+  .logo{
+    #rehan-logo-footer{
+      height: 30px;
+      transition: $sprint;
+      &:hover{
+        transform: scale(1.1);
+      }
+      g{
+        fill:semantic-color(text); //Changes the color of my logo inline
+      }
+      @include breakpoint(small only){
+        height: 22px;
+      }
+    }
+  }
+}
