@@ -29,22 +29,33 @@
 
   <script src="{{ "/js/vendor.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/js/foundation.js" | prepend: site.baseurl }}"></script>
-  <script src="https://kit.fontawesome.com/02150f0422.js" crossorigin="anonymous"></script>
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "Person",
-      "url": "{{site.url}}",
-      "image": "{{site.url}}/img/rehan.png",
-      "alumniOf": "Carnegie Mellon University",
+      "name": "Rehan Butt",
+      "url": "https://www.rehanbutt.com",
+      "image": "https://www.rehanbutt.com/img/rehan.png",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Carnegie Mellon University",
+        "sameAs": "https://www.cmu.edu"
+      },
+      {
+        "@type": "HighSchool",
+        "name": "St. Andrew's Episcopal School",
+        "sameAs": "https://www.saes.org"
+      },
       "sameAs": [
-        "https://rehanbutt.com",
         "https://twitter.com/naher94",
         "https://www.instagram.com/naher94/",
         "https://www.linkedin.com/in/rehan-butt/",
         "https://www.pinterest.com/naher94/",
         "https://dribbble.com/rehanbutt",
-        "https://500px.com/naher94"
+        "https://500px.com/naher94",
+        "https://codepen.io/rehanbutt",
+        "https://www.threads.net/@naher94",
+        "https://www.imdb.com/name/nm15449795/"
       ]
     }
     </script>

@@ -13,12 +13,12 @@
       {% assign each = item | split: '|' %}
         <div class="stat-row grid-x cell align-justify align-middle">
           <h3 class="cell medium-2">{{each[0]}}</h3>
-          <p class="cell auto">
+          <p class="cell auto number-area">
             {{each[1]}}
             {%- if {{each[2]}} contains 'De' -%}
-            <i class="fas fa-caret-down"></i>
+            {%- include_relative img/icons/caret-down.svg -%}
             {%- elsif {{each[2]}} contains 'In' -%}
-            <i class="fas fa-caret-up"></i>
+            {%- include_relative img/icons/caret-up.svg -%}
             {%- endif -%}
           </p>
           <p class="cell shrink stat-description">{{each[2]}}</p>
@@ -40,12 +40,12 @@
       {% assign each = item | split: '|' %}
         <div class="stat-row grid-x cell align-justify align-middle">
           <h3 class="cell medium-2">{{each[0]}}</h3>
-          <p class="cell auto">
+          <p class="cell auto number-area">
             {{each[1]}}
             {%- if {{each[2]}} contains 'De' -%}
-            <i class="fas fa-caret-down"></i>
+            {%- include_relative img/icons/caret-down.svg -%}
             {%- elsif {{each[2]}} contains 'In' -%}
-            <i class="fas fa-caret-up"></i>
+            {%- include_relative img/icons/caret-down.svg -%}
             {%- endif -%}
           </p>
           <p class="cell shrink stat-description">{{each[2]}}</p>
@@ -67,12 +67,12 @@
       {% assign each = item | split: '|' %}
         <div class="stat-row grid-x cell align-justify align-middle">
           <h3 class="cell medium-2">{{each[0]}}</h3>
-          <p class="cell auto">
+          <p class="cell auto number-area">
             {{each[1]}}
             {%- if {{each[2]}} contains 'De' -%}
-            <i class="fas fa-caret-down"></i>
+            {%- include_relative img/icons/caret-down.svg -%}
             {%- elsif {{each[2]}} contains 'In' -%}
-            <i class="fas fa-caret-up"></i>
+            {%- include_relative img/icons/caret-up.svg -%}
             {%- endif -%}
           </p>
           <p class="cell shrink stat-description">{{each[2]}}</p>
@@ -94,12 +94,12 @@
       {% assign each = item | split: '|' %}
         <div class="stat-row grid-x cell align-justify align-middle">
           <h3 class="cell medium-2">{{each[0]}}</h3>
-          <p class="cell auto">
+          <p class="cell auto number-area">
             {{each[1]}}
             {%- if {{each[2]}} contains 'De' -%}
-            <i class="fas fa-caret-down"></i>
+            {%- include_relative img/icons/caret-down.svg -%}
             {%- elsif {{each[2]}} contains 'In' -%}
-            <i class="fas fa-caret-up"></i>
+            {%- include_relative img/icons/caret-up.svg -%}
             {%- endif -%}
           </p>
           <p class="cell shrink stat-description">{{each[2]}}</p>

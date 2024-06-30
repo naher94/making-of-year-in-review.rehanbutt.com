@@ -233,8 +233,16 @@ header, footer{
         font-weight: $merriweather-light;
         color: semantic-color(stat-description);
       }
-      i{
-        margin-inline-start: 0.5em;
+      .number-area{
+        display: flex;
+        align-items: center;
+        svg{
+          scale: 0.85;
+          margin-inline-start: 0.25em;
+          path{
+            fill: semantic-color(text);
+          }
+        }
       }
     }
   }
