@@ -11,7 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
   For the last 5 years, I have put together a personal year in review. What started as a fun way to share what I've been up to has turned into a more elaborate review exploration of new web technologies and a collection of some interesting stats.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "making-of-year-in-review.rehanbutt.com" # the base hostname & protocol for your site
-version: 1.1.2
+version: 1.2.0
 
 keywords: >
   year in review,making of,behind the scenes,bts,recap,devzgn,devzgner,personal review, personal recap,Design,UX,UI,webdev,branding,portfolio,site
