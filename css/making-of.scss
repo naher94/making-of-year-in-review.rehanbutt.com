@@ -244,6 +244,13 @@ header, footer{
           }
         }
       }
+      .movie-poster{
+        aspect-ratio: 1280/1920;
+        height: 4rem;
+        img{
+          width: 3rem;
+        }
+      }
     }
   }
 }
