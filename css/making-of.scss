@@ -131,8 +131,11 @@ section{
   overflow: hidden; //Only needed if the corner flag has a shadow
 }
 
+// Explicit em-based square instead of aspect-ratio + padding: Safari drops the
+// padding when shrink-wrapping an absolute aspect-ratio box, clipping the text
 .corner-flag{
-  aspect-ratio: 1/1;
+  width: 2.25em;
+  height: 2.25em;
   background-color: $navy-black;
   color: $pure-white;
   position: absolute;
@@ -140,13 +143,16 @@ section{
   right: 0;
   font-family: $merriweather;
   font-weight: $merriweather-black;
-  padding: 0.75rem;
   font-size: 2em;
+  line-height: 1;
+  white-space: nowrap;
   box-shadow: -2px 2px 15px -4px rgba($navy-black, 0.5);
   display: flex;
   align-items: center;
+  justify-content: center;
   @include breakpoint(small only) {
-    padding: 0.5rem;
+    width: 2.5em;
+    height: 2.5em;
     font-size: 1em;
   }
 }
